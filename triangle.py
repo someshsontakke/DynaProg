@@ -50,15 +50,31 @@ def copy_array(array1):
 	for i in range(0, len(array1)):
 		output_array1.append(array1[i])
 	return output_array1
-
 def copy_triangle(input_triangle):
 	output_triangle = []
 	for i in range(0,height):
 		output_triangle.append(copy_array(input_triangle[i]))
 	return output_triangle
-
 output_tr = copy_triangle(input_tr)
-input_tr[0][0] = 12
-print output_tr, input_tr[0][0] - output_tr[0][0]
-		
+#input_tr[0][0] = 12
+#print output_tr, input_tr[0][0] - output_tr[0][0]
+
+def gen_arr_trav(height):
+	arr_trav = []
+	for i in range(0,height):
+		arr_trav.append(int(height-i-1))
+	return arr_trav
+arr_2_trav = gen_arr_trav(height)
+#print arr_2_trav
+for i in arr_2_trav:
+	for j in range(0,i+1):
+		if i==height-1:
+			output_tr[i][j] = output_tr[i][j]
+		else:
+			#print i,j
+			output_tr[i][j] = output_tr[i][j] + min(output_tr[i+1][j],output_tr[i+1][j+1])
+#			print i,j
+
+print output_tr, "\n", input_tr
+
 
