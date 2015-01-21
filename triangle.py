@@ -75,6 +75,21 @@ for i in arr_2_trav:
 			output_tr[i][j] = output_tr[i][j] + min(output_tr[i+1][j],output_tr[i+1][j+1])
 #			print i,j
 
-print output_tr, "\n", input_tr
+#print output_tr, "\n", input_tr
+minima = []
+indices = []
+for i in range(0, height):
+	minima.append(output_tr[i][0])
+	indices.append(0)
+	count = 0
+	for j in output_tr[i][:]:
+		if j < minima[i]:
+			minima[i] = j
+			indices[i] = count
+		count = count + 1
+putput = []
+for i in range(0, height):
+	putput.append(input_tr[i][indices[i]])
+print "\n", minima, indices, "\n", putput
 
 
