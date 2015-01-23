@@ -95,4 +95,8 @@ for i in range(0, height):
 	putput.append(input_tr[i][indices[i]])
 print "\n", minima, indices, "\n", putput
 
+//edit entry on 23jan15
+def output_path():
+	for i in range(0, height):
+		
 
