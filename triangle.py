@@ -97,6 +97,19 @@ print "\n", minima, indices, "\n", putput
 
 //edit entry on 23jan15
 def output_path():
+	path1 = []
+	path1.append(0)
+	p=0
 	for i in range(0, height):
-		
+		if i<(height-1):
+			if output_tr[i+1][p]<output_tr[i+1][p+1]:
+				path1.append(p)
+			else:
+				path1.append(p+1)
+				p = p+1
+	return path1
+
+path_to_print = output_path()
+print path_to_print
+			
 
