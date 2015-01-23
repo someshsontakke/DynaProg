@@ -75,10 +75,11 @@ for i in arr_2_trav:
 			output_tr[i][j] = output_tr[i][j] + min(output_tr[i+1][j],output_tr[i+1][j+1])
 #			print i,j
 
-#print output_tr, "\n", input_tr
+print output_tr, "\n", input_tr
 minima = []
 indices = []
 j=0
+"""
 for i in range(0, height):
 	minima.append(output_tr[i][j])
 	indices.append(j)
@@ -94,8 +95,8 @@ putput = []
 for i in range(0, height):
 	putput.append(input_tr[i][indices[i]])
 print "\n", minima, indices, "\n", putput
-
-//edit entry on 23jan15
+"""
+#edit entry on 23jan15
 def output_path():
 	path1 = []
 	path1.append(0)
